@@ -1,0 +1,3 @@
+// JARVIS - Plugin Packages Scaffolding
+// Script to generate base structure for all JARVIS plugins
+export {};

@@ -1,0 +1,6 @@
+packages:
+  - 'packages/*'
+  - 'packages/plugins/*'
+allowBuilds:
+  electron: set this to true or false
+  esbuild: true

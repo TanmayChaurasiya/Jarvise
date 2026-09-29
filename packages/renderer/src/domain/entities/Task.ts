@@ -1,0 +1,2 @@
+// JARVIS - Task Entity
+export {};

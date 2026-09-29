@@ -1,0 +1,57 @@
+/* ============================================================
+   JARVIS - Animations
+   ============================================================ */
+
+/* Pulse glow animation for voice orb */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px var(--neon-blue), 0 0 40px hsla(200, 100%, 50%, 0.3); }
+  50% { box-shadow: 0 0 30px var(--neon-blue-glow), 0 0 60px hsla(200, 100%, 50%, 0.5); }
+}
+
+/* Breathing animation */
+@keyframes breathe {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 1; }
+}
+
+/* Holographic shimmer */
+@keyframes holographic {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Fade in up */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Spin */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Waveform */
+@keyframes waveform {
+  0%, 100% { height: 4px; }
+  50% { height: 24px; }
+}
+
+/* Neon flicker */
+@keyframes neon-flicker {
+  0%, 100% { opacity: 1; }
+  92% { opacity: 1; }
+  93% { opacity: 0.8; }
+  94% { opacity: 1; }
+  96% { opacity: 0.9; }
+  97% { opacity: 1; }
+}
+
+/* Utility classes */
+.animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+.animate-breathe { animation: breathe 3s ease-in-out infinite; }
+.animate-holographic { animation: holographic 3s linear infinite; }
+.animate-fade-in-up { animation: fade-in-up 0.4s ease-out forwards; }
+.animate-spin-slow { animation: spin-slow 8s linear infinite; }
+.animate-neon-flicker { animation: neon-flicker 4s ease-in-out infinite; }

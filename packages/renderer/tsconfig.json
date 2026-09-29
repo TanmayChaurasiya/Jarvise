@@ -1,0 +1,22 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "composite": true,
+    "jsx": "react-jsx",
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["./*"],
+      "@application/*": ["./application/*"],
+      "@presentation/*": ["./presentation/*"],
+      "@domain/*": ["./domain/*"],
+      "@infrastructure/*": ["./infrastructure/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["node_modules", "dist"],
+  "references": [
+    { "path": "../shared" }
+  ]
+}

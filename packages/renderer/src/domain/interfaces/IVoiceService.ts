@@ -1,0 +1,2 @@
+// JARVIS - IVoiceService Interface
+export {};

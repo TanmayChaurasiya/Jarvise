@@ -1,0 +1,34 @@
+{
+  "name": "jarvis",
+  "version": "0.1.0",
+  "private": true,
+  "description": "JARVIS - AI Desktop Assistant",
+  "author": "JARVIS Team",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @jarvis/backend --filter @jarvis/renderer --filter @jarvis/electron --parallel run dev",
+    "dev:electron": "pnpm --filter @jarvis/electron dev",
+    "dev:renderer": "pnpm --filter @jarvis/renderer dev",
+    "dev:backend": "pnpm --filter @jarvis/backend dev",
+    "build": "pnpm run build:shared && pnpm run --parallel build:packages",
+    "build:shared": "pnpm --filter @jarvis/shared build",
+    "build:packages": "pnpm --filter \"!@jarvis/shared\" build",
+    "build:electron": "pnpm --filter @jarvis/electron build",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "clean": "pnpm -r clean && rimraf node_modules"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.7.3",
+    "eslint": "^9.20.0",
+    "prettier": "^3.5.0"
+  }
+}

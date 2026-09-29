@@ -1,0 +1,80 @@
+/* ============================================================
+   JARVIS - Theme Classes
+   ============================================================ */
+
+/* Glass panel */
+.glass-panel {
+  background: var(--bg-glass);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: var(--glass-border);
+  border-radius: var(--glass-radius);
+  box-shadow: var(--shadow-md);
+}
+
+.glass-panel:hover {
+  background: var(--bg-glass-hover);
+  border-color: var(--border-glow);
+  box-shadow: var(--shadow-glow);
+}
+
+/* Holographic border */
+.holo-border {
+  position: relative;
+  overflow: hidden;
+}
+
+.holo-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    var(--neon-blue),
+    var(--neon-purple),
+    var(--neon-cyan),
+    var(--neon-blue)
+  );
+  background-size: 200% 200%;
+  animation: holographic 3s linear infinite;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+  pointer-events: none;
+}
+
+/* Neon text */
+.neon-text {
+  color: var(--neon-blue);
+  text-shadow:
+    0 0 7px var(--neon-blue),
+    0 0 20px hsla(200, 100%, 50%, 0.4);
+}
+
+/* Status indicators */
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.status-dot--active {
+  background: var(--neon-green);
+  box-shadow: 0 0 6px var(--neon-green);
+}
+
+.status-dot--warning {
+  background: var(--neon-amber);
+  box-shadow: 0 0 6px var(--neon-amber);
+}
+
+.status-dot--error {
+  background: var(--neon-red);
+  box-shadow: 0 0 6px var(--neon-red);
+}
+
+.status-dot--inactive {
+  background: var(--text-muted);
+}

@@ -1,0 +1,59 @@
+/* ============================================================
+   JARVIS - Global Styles
+   ============================================================ */
+
+@import "tailwindcss";
+@import "./variables.css";
+@import "./animations.css";
+@import "./theme.css";
+
+/* Base resets */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-default);
+}
+
+/* Code font */
+code, pre, .mono {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}

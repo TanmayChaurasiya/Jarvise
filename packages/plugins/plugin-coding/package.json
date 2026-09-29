@@ -1,0 +1,19 @@
+{
+  "name": "@jarvis/plugin-coding",
+  "version": "0.1.0",
+  "private": true,
+  "description": "JARVIS Coding Plugin",
+  "type": "module",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "rimraf dist *.tsbuildinfo"
+  },
+  "dependencies": {
+    "@jarvis/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3",
+    "rimraf": "^6.0.1"
+  }
+}
